@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Build and test 1</h1>
+
+
+<input type="text" id="newText">
+<button type="button" onclick="myFunction()">Click Me!</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() { 
+  let newText = document.getElementById("newText").value; //Recuperer la valeur saisie par l'utilisateur sur le input et on le place dans la variable newText
+  document.getElementById("demo").innerHTML = newText; // Affiche la valeur de la variable newText sur le paragraphe ayant id demo
+  testUnitairePrint(); // test unitaire
+}
+
+function unitTestPrint(){
+    if (document.getElementById("demo").innerHTML === document.getElementById("newText").value){
+        console.log("Test Succeed")
+    }
+    else throw Error ("Test Failed On MyFunction")
+}
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
